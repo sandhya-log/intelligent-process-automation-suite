@@ -18,6 +18,10 @@ from PIL import Image
 import pytesseract
 
 
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+
+
+
 def extract_text_from_file(file_path: str) -> str:
     try:
         image = Image.open(file_path)
