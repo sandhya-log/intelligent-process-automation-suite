@@ -1,5 +1,5 @@
-from backend.app.db.database import SessionLocal, engine
-from backend.app.db.models import Document, Base
+from app.db.database import SessionLocal, engine
+from app.db.models import Document, Base
 
 # Create tables
 Base.metadata.create_all(bind=engine)

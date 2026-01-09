@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from sqlalchemy import func
-from backend.app.db.database import SessionLocal
-from backend.app.db.models import Document
+from app.db.database import SessionLocal
+from app.db.models import Document
 
 router = APIRouter(prefix="/analytics", tags=["Analytics"])
 

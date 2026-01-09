@@ -1,6 +1,6 @@
 from fastapi import UploadFile
-from backend.app.utils.file_storage import save_file
-from backend.app.core.logger import logger
+from app.utils.file_storage import save_file
+from app.core.logger import logger
 
 
 def ingest_document(file: UploadFile) -> dict:

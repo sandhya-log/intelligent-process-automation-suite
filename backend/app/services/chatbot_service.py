@@ -1,5 +1,5 @@
-from backend.app.db.database import SessionLocal
-from backend.app.db.models import Document
+from app.db.database import SessionLocal
+from app.db.models import Document
 
 
 def answer_question(question: str) -> dict:

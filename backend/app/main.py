@@ -17,7 +17,7 @@
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.app.api.v1.routes import api_router
+from app.api.v1.routes import api_router
 
 app = FastAPI(
     title="AE-V2-IPAS",

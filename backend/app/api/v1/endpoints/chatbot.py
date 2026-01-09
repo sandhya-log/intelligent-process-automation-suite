@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from backend.app.services.chatbot_service import answer_question
+from app.services.chatbot_service import answer_question
 
 router = APIRouter(prefix="/chatbot", tags=["Chatbot"])
 

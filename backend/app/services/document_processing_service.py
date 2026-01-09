@@ -1,6 +1,6 @@
-from backend.app.utils.ocr_engine import extract_text_from_file
-from backend.app.services.persistence_service import save_document
-from backend.app.core.logger import logger
+from app.utils.ocr_engine import extract_text_from_file
+from app.services.persistence_service import save_document
+from app.core.logger import logger
 
 
 # def process_document(document_id: str, file_path: str) -> dict:

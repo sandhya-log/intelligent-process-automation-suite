@@ -1,10 +1,10 @@
 from fastapi import APIRouter
-from backend.app.api.v1.endpoints import ingestion
-from backend.app.api.v1.endpoints import processing
-from backend.app.api.v1.endpoints import workflow
-from backend.app.services.persistence_service import save_document
-from backend.app.api.v1.endpoints import analytics
-from backend.app.api.v1.endpoints import chatbot
+from app.api.v1.endpoints import ingestion
+from app.api.v1.endpoints import processing
+from app.api.v1.endpoints import workflow
+from app.services.persistence_service import save_document
+from app.api.v1.endpoints import analytics
+from app.api.v1.endpoints import chatbot
 
 api_router = APIRouter()
 

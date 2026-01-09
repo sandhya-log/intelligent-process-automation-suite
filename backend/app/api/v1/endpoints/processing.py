@@ -1,7 +1,7 @@
 from fastapi import APIRouter
-from backend.app.services.document_processing_service import process_document
+from app.services.document_processing_service import process_document
 import os
-from backend.app.core.logger import logger
+from app.core.logger import logger
 
 
 router = APIRouter(prefix="/process", tags=["Processing"])

@@ -1,5 +1,5 @@
 from fastapi import APIRouter, UploadFile, File
-from backend.app.services.ingestion_service import ingest_document
+from app.services.ingestion_service import ingest_document
 
 router = APIRouter(prefix="/ingestion", tags=["Ingestion"])
 
