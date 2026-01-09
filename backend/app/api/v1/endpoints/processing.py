@@ -1,6 +1,8 @@
 from fastapi import APIRouter
 from backend.app.services.document_processing_service import process_document
 import os
+from backend.app.core.logger import logger
+
 
 router = APIRouter(prefix="/process", tags=["Processing"])
 
@@ -19,3 +21,16 @@ def process_uploaded_document(document_id: str):
     file_path = os.path.join(upload_dir, matching_files[0])
 
     return process_document(document_id, file_path)
+
+
+@router.post("/{document_id}")
+def process_uploaded_document(document_id: str):
+    try:
+        ...
+        return process_document(document_id, file_path)
+    except Exception as e:
+        logger.error(f"Processing failed for {document_id}: {str(e)}")
+        return {
+            "status": "failed",
+            "error": "Document processing failed"
+        }

@@ -1,5 +1,6 @@
 from backend.app.utils.ocr_engine import extract_text_from_file
 from backend.app.services.persistence_service import save_document
+from backend.app.core.logger import logger
 
 
 # def process_document(document_id: str, file_path: str) -> dict:
@@ -22,8 +23,13 @@ def process_document(document_id: str, file_path: str) -> dict:
         status="processed"
     )
 
+    logger.info(f"OCR started for document: {document_id}")
+    logger.info(f"OCR completed for document: {document_id}")
+
     return {
         "document_id": document_id,
         "extracted_text": extracted_text,
         "status": "processed"
     }
+
+  
