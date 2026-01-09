@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  backend:
+    image: ae-v2-ipas-backend:latest
+    container_name: ae-v2-ipas-backend
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://ipas_user:ipas_pass@db:5432/ipas_db
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    container_name: ae-v2-ipas-db
+    environment:
+      POSTGRES_USER: ipas_user
+      POSTGRES_PASSWORD: ipas_pass
+      POSTGRES_DB: ipas_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ipas_db_data:/var/lib/postgresql/data
+
+volumes:
+  ipas_db_data:
